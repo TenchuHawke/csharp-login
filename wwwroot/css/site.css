@@ -1,1 +1,46 @@
-/*Write all of your CSS here*/
+/* Customize the navbar links to be fill the entire space of the .navbar */
+
+
+/*
+.container {
+    min-width: 800px;
+}*/
+
+.navbar img {
+    height: 60px;
+}
+
+
+/*
+#main {
+    margin: 60px 0px 0px 0px;
+}
+
+.top-buffer {
+    margin-top: 20px;
+}*/
+
+
+/*.framed {
+    border-radius: 5px;
+    border: 3px solid darkblue;
+    padding: 5px 10px 20px 10px;
+}*/
+
+
+/*
+.bdate {
+    width: 174px;
+    text-indent: 18px;
+    padding-left: 18px;
+}
+
+.bdateinput {
+    width: 174px;
+    text-indent: 12px;
+    padding-left: 12px;
+}
+
+.offset {
+    margin-left: 4px;
+}*/

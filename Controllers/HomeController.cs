@@ -12,6 +12,7 @@ namespace login.Controllers
         [Route("")]
         public IActionResult Index()
         {
+            ViewBag.loginState=false;
             return View();
         }
     }
