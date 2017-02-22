@@ -17,21 +17,29 @@
             <li><a asp-controller="Home" asp-action="Index">Home</a></li>
             <li><a asp-controller="Home" asp-action="About">About</a></li>
             <li><a asp-controller="Home" asp-action="Contact">Contact</a></li>
-            @{ if ( ViewBag.loginState==true) {
+            @{ if ( ViewBag.loginState=="true") {
             <li><a asp-controller="Login" asp-action="Logout">Logout</a></li>
             } else {
-            <li><a asp-controller="Login" asp-action="Login">Login</a></li>
+            <li><a asp-controller="Login" asp-action="LogRegPage">Login</a></li>
             } }
         </ul>
     </div>
 </div>
+@{ if(ViewBag.Errors!=null){ }
+<div class="container">
+    <div class="text-danger">
+        <ul>
+            @foreach (string error in ViewBag.Errors){
+            <li>@error</li>
+            }
+        </ul>
 
+    </div>
+</div>
+}
 
 <div class="container" id="main">
     <div class="framed col-md-6">
-        <div class="row">
-
-        </div>
         <div class="row">
             <div class="col-md-12">
                 <h3 class="text-center"> Please Login or Register Below </h3>
@@ -63,9 +71,17 @@
                 </span>
                 <br>
                 <input type="password" name="password" class="text-center inputbox" placeholder="Password">
-                </form>
             </div>
         </div>
+        <div class="row top-buffer">
+            <div class="col-sm-5">
+            </div>
+            <div class="col-sm-2">
+                <button type="submit">Log In</button>
+
+            </div>
+        </div>
+        </form>
     </div>
 </div>
 
@@ -91,7 +107,7 @@
                     <span class="offset">
                 Password
                 </span>
-                    <input type="password" name="password" class="text-center inputbox" placeholder="Password">
+                    <input type="password" name="password" class="text-center inputbox" placeholder="Password" value="password">
                 </div>
                 <div class="col-md-4 text-center">
                     <span class="offset">
@@ -118,8 +134,17 @@
             </div>
         </div>
         <div class="row top-buffer">
-            <div class="col-md-4">
-
+            <div class="col-md-4 text-center">
+                <span class="offset">
+                First Name
+                </span>
+                <input type="text" name="first_name" class="text-center inputbox" placeholder="First Name">
+            </div>
+            <div class="col-md-4 text-center">
+                <span class="offset">
+                Last Name
+                </span>
+                <input type="text" name="last_name" class="text-center inputbox" placeholder="Last Name">
             </div>
             <div class="col-md-4 text-center">
                 <span class="offset">
@@ -127,8 +152,16 @@
                 </span>
                 <input type="text" name="favoriteColor" class="text-center inputbox" placeholder="Favorite Color">
             </div>
-            </form>
         </div>
+        <div class="row top-buffer">
+            <div class="col-sm-5">
+            </div>
+            <div class="col-sm-2">
+                <button type="submit">Register</button>
+
+            </div>
+        </div>
+        </form>
     </div>
 </div>
 </div>

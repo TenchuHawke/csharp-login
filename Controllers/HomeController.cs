@@ -1,9 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace login.Controllers
+namespace Login.Controllers
 {
     public class HomeController : Controller
     {
@@ -12,7 +13,7 @@ namespace login.Controllers
         [Route("")]
         public IActionResult Index()
         {
-            ViewBag.loginState=false;
+            ViewBag.loginState=HttpContext.Session.GetString("loginState");
             return View();
         }
     }

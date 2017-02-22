@@ -35,10 +35,10 @@
 </div>
 <br>
 
-<br>
+<br>@ViewBag.loginState
 <br> @{ if(ViewBag.loginState=="true") {
 <br>
-<p>Congratulations. You are logged in! </p> } else {
+<p>Congratulations. You are logged in, @ViewBag.User.username ! </p> } else {
 <br>
 <p>You are not logged in, please click login.</p>
 }}
